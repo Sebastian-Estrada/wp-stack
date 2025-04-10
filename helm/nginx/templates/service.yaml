@@ -9,5 +9,6 @@ spec:
   - port: 8090            # the port on which the service is listening
     protocol: TCP
     targetPort: {{ .Values.nginx.containerPorts.nginx }}      # the port exposed by Pod (we defined in the deployment as part of `containerPort)
+  type: NodePort
   selector:
 {{- toYaml .Values.nginx.labels | nindent 4 }}       # Pod label that service is using to select Pods
