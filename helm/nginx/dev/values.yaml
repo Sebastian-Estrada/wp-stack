@@ -1,0 +1,13 @@
+nginx:
+  name: nginx
+  labels:
+    app: nginx
+    env: dev
+    stack: wordpress
+  image:
+    repository: sebasnates/nginx_ica
+    tag: latest
+    pullPolicy: Always
+  replicas: 1
+  containerPorts:
+      nginx: 80
