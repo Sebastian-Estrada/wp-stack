@@ -16,4 +16,4 @@ wp:
     WORDPRESS_DB_NAME: "wordpress"
     WORDPRESS_DB_USER: "wordpress"
   containerPorts:
-      http: 8001
+      http: 80
