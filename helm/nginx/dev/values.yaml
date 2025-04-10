@@ -1,6 +1,7 @@
 nginx:
   name: nginx
   labels:
+    id: "c0922317"
     app: nginx
     env: dev
     stack: wordpress
