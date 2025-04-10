@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.db.name }}
   labels:
-{{- toYaml .Values.db.labels.id | nindent 4 }}
+{{- toYaml .Values.db.labels | nindent 4 }}
 spec:
   selector:
     matchLabels:
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-{{- toYaml .Values.db.labels.id | nindent 8 }}
+{{- toYaml .Values.db.labels | nindent 8 }}
     spec:
       containers:
       - name: {{ .Values.db.name }}

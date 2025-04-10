@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ .Values.db.name }}
   labels:
-{{- toYaml .Values.db.labels.id | nindent 4 }}
+{{- toYaml .Values.db.labels | nindent 4 }}
 spec:
   ports:
   - port: 3306            # the port on which the service is listening
